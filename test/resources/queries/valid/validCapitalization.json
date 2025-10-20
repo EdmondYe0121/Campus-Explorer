@@ -1,0 +1,19 @@
+{
+	"title": "Valid Capitalization",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "CPSC"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}

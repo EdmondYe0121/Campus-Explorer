@@ -1,0 +1,19 @@
+{
+	"title": "Query with capitalization",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_Avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_Dept",
+				"sections_Avg"
+			],
+			"ORDER": "sections_Avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

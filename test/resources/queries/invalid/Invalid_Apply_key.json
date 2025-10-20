@@ -1,0 +1,28 @@
+{
+	"title": "MIN on non-existing field",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"minCapacity"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": ["minCapacity"]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["rooms_shortname"],
+			"APPLY": [
+				{
+					"minCapacity": {
+						"MIN": "rooms_capacity"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

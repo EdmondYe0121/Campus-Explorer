@@ -1,0 +1,32 @@
+{
+	"title": "Invalid Avg Input Type",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"totalSeats"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"totalSeats"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"totalSeats": {
+						"AVG": "rooms_furniture"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

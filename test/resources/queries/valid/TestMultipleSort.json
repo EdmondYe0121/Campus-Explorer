@@ -1,0 +1,33 @@
+{
+	"title": "Test Multiple Sort Rules",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"numRoomTypes"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"numRoomTypes",
+					"rooms_shortname"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"numRoomTypes": {
+						"COUNT": "rooms_type"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"rooms_shortname":"ANGU","numRoomTypes":5},{"rooms_shortname":"MCML","numRoomTypes":4},{"rooms_shortname":"LASR","numRoomTypes":4},{"rooms_shortname":"IBLC","numRoomTypes":4},{"rooms_shortname":"BUCH","numRoomTypes":4},{"rooms_shortname":"UCLL","numRoomTypes":3},{"rooms_shortname":"SWNG","numRoomTypes":3},{"rooms_shortname":"PHRM","numRoomTypes":3},{"rooms_shortname":"ORCH","numRoomTypes":3},{"rooms_shortname":"MCLD","numRoomTypes":3},{"rooms_shortname":"MATH","numRoomTypes":3},{"rooms_shortname":"GEOG","numRoomTypes":3},{"rooms_shortname":"FSC","numRoomTypes":3},{"rooms_shortname":"FNH","numRoomTypes":3},{"rooms_shortname":"CEME","numRoomTypes":3},{"rooms_shortname":"WOOD","numRoomTypes":2},{"rooms_shortname":"SPPH","numRoomTypes":2},{"rooms_shortname":"SOWK","numRoomTypes":2},{"rooms_shortname":"SCRF","numRoomTypes":2},{"rooms_shortname":"PCOH","numRoomTypes":2},{"rooms_shortname":"OSBO","numRoomTypes":2},{"rooms_shortname":"LSK","numRoomTypes":2},{"rooms_shortname":"IONA","numRoomTypes":2},{"rooms_shortname":"HENN","numRoomTypes":2},{"rooms_shortname":"HEBB","numRoomTypes":2},{"rooms_shortname":"FORW","numRoomTypes":2},{"rooms_shortname":"DMP","numRoomTypes":2},{"rooms_shortname":"CHBE","numRoomTypes":2},{"rooms_shortname":"BRKX","numRoomTypes":2},{"rooms_shortname":"BIOL","numRoomTypes":2},{"rooms_shortname":"ANSO","numRoomTypes":2},{"rooms_shortname":"ALRD","numRoomTypes":2},{"rooms_shortname":"WESB","numRoomTypes":1},{"rooms_shortname":"SRC","numRoomTypes":1},{"rooms_shortname":"MGYM","numRoomTypes":1},{"rooms_shortname":"MATX","numRoomTypes":1},{"rooms_shortname":"LSC","numRoomTypes":1},{"rooms_shortname":"FRDM","numRoomTypes":1},{"rooms_shortname":"ESB","numRoomTypes":1},{"rooms_shortname":"EOSM","numRoomTypes":1},{"rooms_shortname":"CIRS","numRoomTypes":1},{"rooms_shortname":"CHEM","numRoomTypes":1},{"rooms_shortname":"AUDX","numRoomTypes":1},{"rooms_shortname":"AERL","numRoomTypes":1}]
+}

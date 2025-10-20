@@ -1,0 +1,32 @@
+{
+	"title": "Count unique furniture types per building",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_lat",
+				"numFurnitureTypes"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"rooms_lat"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_lat"
+			],
+			"APPLY": [
+				{
+					"numFurnitureTypes": {
+						"COUNT": "rooms_furniture"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"rooms_lat":49.26044,"numFurnitureTypes":3},{"rooms_lat":49.26047,"numFurnitureTypes":2},{"rooms_lat":49.26048,"numFurnitureTypes":5},{"rooms_lat":49.26114,"numFurnitureTypes":4},{"rooms_lat":49.26125,"numFurnitureTypes":2},{"rooms_lat":49.26176,"numFurnitureTypes":3},{"rooms_lat":49.26207,"numFurnitureTypes":1},{"rooms_lat":49.26228,"numFurnitureTypes":2},{"rooms_lat":49.26229,"numFurnitureTypes":2},{"rooms_lat":49.26236,"numFurnitureTypes":1},{"rooms_lat":49.26273,"numFurnitureTypes":3},{"rooms_lat":49.26274,"numFurnitureTypes":3},{"rooms_lat":49.26293,"numFurnitureTypes":3},{"rooms_lat":49.26372,"numFurnitureTypes":1},{"rooms_lat":49.26398,"numFurnitureTypes":3},{"rooms_lat":49.264,"numFurnitureTypes":3},{"rooms_lat":49.26414,"numFurnitureTypes":3},{"rooms_lat":49.2642,"numFurnitureTypes":2},{"rooms_lat":49.2643,"numFurnitureTypes":2},{"rooms_lat":49.26478,"numFurnitureTypes":4},{"rooms_lat":49.26479,"numFurnitureTypes":3},{"rooms_lat":49.26486,"numFurnitureTypes":2},{"rooms_lat":49.26517,"numFurnitureTypes":1},{"rooms_lat":49.26541,"numFurnitureTypes":1},{"rooms_lat":49.26545,"numFurnitureTypes":2},{"rooms_lat":49.2659,"numFurnitureTypes":1},{"rooms_lat":49.26605,"numFurnitureTypes":4},{"rooms_lat":49.266089,"numFurnitureTypes":1},{"rooms_lat":49.2661,"numFurnitureTypes":2},{"rooms_lat":49.26627,"numFurnitureTypes":2},{"rooms_lat":49.2663,"numFurnitureTypes":1},{"rooms_lat":49.266463,"numFurnitureTypes":3},{"rooms_lat":49.2666,"numFurnitureTypes":1},{"rooms_lat":49.26766,"numFurnitureTypes":5},{"rooms_lat":49.26767,"numFurnitureTypes":4},{"rooms_lat":49.26826,"numFurnitureTypes":7},{"rooms_lat":49.2683,"numFurnitureTypes":1},{"rooms_lat":49.26862,"numFurnitureTypes":2},{"rooms_lat":49.26867,"numFurnitureTypes":3},{"rooms_lat":49.26958,"numFurnitureTypes":3},{"rooms_lat":49.2699,"numFurnitureTypes":2},{"rooms_lat":49.27106,"numFurnitureTypes":2}]
+}

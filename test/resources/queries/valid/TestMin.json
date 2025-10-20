@@ -1,0 +1,30 @@
+{
+	"title": "Find the smallest room per building with fixed chairs",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_furniture": "*Fixed Chairs*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"minSeats"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": ["minSeats"]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["rooms_shortname"],
+			"APPLY": [{
+				"minSeats": {
+					"MIN": "rooms_seats"
+				}
+			}]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"rooms_shortname":"LASR","minSeats":80},{"rooms_shortname":"CEME","minSeats":100},{"rooms_shortname":"BUCH","minSeats":108},{"rooms_shortname":"MCLD","minSeats":123},{"rooms_shortname":"IBLC","minSeats":154},{"rooms_shortname":"LSK","minSeats":183},{"rooms_shortname":"HEBB","minSeats":375}]
+}

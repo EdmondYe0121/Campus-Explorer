@@ -1,0 +1,19 @@
+{
+	"title": "Query empty dataset name",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"_dept",
+				"_avg"
+			],
+			"ORDER": "_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

@@ -1,0 +1,19 @@
+{
+	"title": "Query dataset that is not add",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"BC_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"BC_dept",
+				"BC_avg"
+			],
+			"ORDER": "BC_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}
